@@ -1,0 +1,40 @@
+[package]
+name = "wit"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.71"
+clap = { version = "4.3.3", features = ["derive"] }
+toml_edit = { version = "0.19.10", features = ["serde"] }
+warg-protocol = { git = "https://github.com/bytecodealliance/registry" }
+warg-client = { git = "https://github.com/bytecodealliance/registry" }
+warg-crypto = { git = "https://github.com/bytecodealliance/registry" }
+wit-component = "0.11.0"
+wit-parser = "0.8.0"
+url = { version = "2.4.0", features = ["serde"] }
+semver = "1.0.17"
+tracing = "0.1.37"
+tokio = "1.28.2"
+tracing-subscriber = { version = "0.3.17", features = ["env-filter"] }
+serde = { version = "1.0.164", features = ["derive"] }
+colored = "2.0.0"
+indexmap = "1.9.3"
+indicatif = "0.17.5"
+futures = "0.3.28"
+wasm-metadata = "0.8.0"
+bytes = "1.4.0"
+keyring = "2.0.3"
+p256 = "0.13.2"
+rand_core = "0.6.4"
+rpassword = "7.2.0"
+
+[target.'cfg(unix)'.dependencies.libc]
+version = "0.2.144"
+
+[target.'cfg(windows)'.dependencies.windows-sys]
+version = "0.48"
+features = [
+  "Win32_Foundation",
+  "Win32_Storage_FileSystem",
+]
