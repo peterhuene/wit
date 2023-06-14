@@ -7,7 +7,7 @@ use rand_core::OsRng;
 use std::io::{self, Write};
 use warg_crypto::signing::PrivateKey;
 
-/// Manage signing keys for publishing components to a registry.
+/// Manage signing keys for publishing packages to a registry.
 #[derive(Args)]
 pub struct KeyCommand {
     /// The subcommand to execute.
