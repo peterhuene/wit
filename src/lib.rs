@@ -376,7 +376,7 @@ pub async fn update_lockfile(config: &Config, config_path: &Path, dry_run: bool)
             if old_ver.version != new_ver.version {
                 println!(
                     "{updating} registry package `{id}` v{old} -> v{new}",
-                    updating = "Updating".bright_green(),
+                    updating = "updating".bright_green(),
                     id = old_pkg.id,
                     old = old_ver.version,
                     new = new_ver.version,
